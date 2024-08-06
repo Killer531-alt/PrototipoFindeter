@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Crédito - Findeter</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card-header {
+            background-color: #0056a6;
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #0056a6;
+            border-color: #0056a6;
+        }
+        .btn-primary:hover {
+            background-color: #004494;
+            border-color: #004494;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .text-center button {
+            margin-top: 20px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #0056a6;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Formulario de Crédito</h2>
+        <form>
+            <!-- Información general del crédito -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    Información general del crédito
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="nombreEmpresa">Nombre o razón social de la empresa o entidad que toma el crédito</label>
+                        <input type="text" class="form-control" id="nombreEmpresa" placeholder="Ingrese el nombre de la empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="sector">Describa a qué sector pertenece y a qué se dedica</label>
+                        <textarea class="form-control" id="sector" rows="3" placeholder="Describa el sector y la actividad de la empresa"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="usoRecursos">Indique el uso de los recursos de crédito</label>
+                        <textarea class="form-control" id="usoRecursos" rows="3" placeholder="Indique el uso de los recursos del crédito"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="valorCredito">Valor del crédito con Findeter (COP)</label>
+                        <input type="number" class="form-control" id="valorCredito" placeholder="Ingrese el valor del crédito">
+                    </div>
+                    <div class="form-group">
+                        <label>¿El crédito incluye alguna actividad de la Lista de Excluidos de Findeter en la pestaña 3 del formulario?</label>
+                        <select class="form-control" id="actividadExcluida">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestión Ambiental y Social del beneficiario del crédito -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    Gestión Ambiental y Social del beneficiario del crédito
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>¿Cuenta con departamento de gestión ambiental y social?</label>
+                        <select class="form-control" id="deptoGestionAmbiental">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuenta con personal encargado de temas A&S y climáticos?</label>
+                        <select class="form-control" id="personalASClimaticos">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuenta con políticas o directrices ambientales en su empresa?</label>
+                        <select class="form-control" id="politicasAmbientales">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuenta con certificaciones de tipo ambiental ISO 14001?</label>
+                        <select class="form-control" id="certificacionesISO">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuenta con matriz legal ambiental o documento similar?</label>
+                        <select class="form-control" id="matrizLegalAmbiental">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Identifica y previene los impactos ambientales y sociales de su empresa?</label>
+                        <select class="form-control" id="prevencionImpactos">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuenta con un mecanismo para atender quejas y reclamos por parte de la comunidad?</label>
+                        <select class="form-control" id="mecanismoQuejas">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cumple con la normatividad laboral nacional aplicable vigente?</label>
+                        <select class="form-control" id="normatividadLaboral">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Realizan supervisión ambiental y social en su empresa congruente a la magnitud de sus actividades?</label>
+                        <select class="form-control" id="supervisionAS">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Comunica públicamente los temas socio ambientales a los actores relevantes y/o están disponibles online?</label>
+                        <select class="form-control" id="comunicacionPublica">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Identifica situaciones emergencias, provee equipos, capacitaciones y recursos necesarios en estos casos y evitar accidentes?</label>
+                        <select class="form-control" id="emergenciasRecursos">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Ha sido sancionado por incumplimiento de normatividad ambiental o laboral?</label>
+                        <select class="form-control" id="sancionadoNormatividad">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Tiene pasivos ambientales?</label>
+                        <select class="form-control" id="pasivosAmbientales">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Ha recibido denuncias o manifestaciones de la comunidad o de los empleados por los impactos ambientales/sociales?</label>
+                        <select class="form-control" id="denunciasImpactos">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información del proyecto o inversión -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    Información del proyecto o inversión
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="descripcionProyecto">Descripción del proyecto/inversión</label>
+                        <textarea class="form-control" id="descripcionProyecto" rows="3" placeholder="Describa el proyecto o inversión"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="faseProyecto">Seleccione la fase o etapa del proyecto/inversión</label>
+                        <select class="form-control" id="faseProyecto">
+                            <option>Por Iniciar</option>
+                            <option>En ejecución</option>
+                            <option>Finalizado</option>
+                            <option>En operación</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="porcentajeAvance">En caso de haber iniciado, indicar el porcentaje de avance</label>
+                        <input type="number" class="form-control" id="porcentajeAvance" placeholder="Ingrese el porcentaje de avance">
+                    </div>
+                    <div class="form-group">
+                        <label for="tiempoTotalObra">Tiempo total de la obra</label>
+                        <input type="text" class="form-control" id="tiempoTotalObra" placeholder="Ingrese el tiempo total de la obra">
+                    </div>
+                    <div class="form-group">
+                        <label for="valorTotalProyecto">Valor total del proyecto / inversión (COP)</label>
+                        <input type="number" class="form-control" id="valorTotalProyecto" placeholder="Ingrese el valor total del proyecto">
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacionProyecto">Ubicación del proyecto/inversión (Ciudad, Departamento)</label>
+                        <input type="text" class="form-control" id="ubicacionProyecto" placeholder="Ingrese la ubicación del proyecto">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoriaProyecto">Seleccione la categoría del proyecto / inversión</label>
+                        <select class="form-control" id="categoriaProyecto">
+                            <option>Obras de infraestructura</option>
+                            <option>Adquisición de equipos, maquinaria y/o vehículos</option>
+                            <option>Dotación</option>
+                            <option>Adquisición de bienes inmuebles</option>
+                            <option>Estudios, diseños</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zonaProyecto">Seleccione la zona donde se desarrolla</label>
+                        <select class="form-control" id="zonaProyecto">
+                            <option>Zona Urbana</option>
+                            <option>Zona de expansión Urbana</option>
+                            <option>Zona Rural</option>
+                            <option>Zona suburbana</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="permisoAmbiental">¿Cuenta con permisos ambientales?</label>
+                        <select class="form-control" id="permisoAmbiental">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tiposPermisos">En caso afirmativo, indique cuáles permisos</label>
+                        <textarea class="form-control" id="tiposPermisos" rows="3" placeholder="Indique los permisos ambientales"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="emisionesProyecto">¿El proyecto tiene emisiones de gases o material particulado al aire?</label>
+                        <select class="form-control" id="emisionesProyecto">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="manejoResiduos">¿El proyecto genera residuos peligrosos o especiales?</label>
+                        <select class="form-control" id="manejoResiduos">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="impactoComunidades">¿El proyecto requiere reasentamiento involuntario de comunidades?</label>
+                        <select class="form-control" id="impactoComunidades">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        Findeter - Financiera del Desarrollo
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

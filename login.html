@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Findeter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-signin {
+            max-width: 400px;
+            padding: 30px;
+            margin: auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .form-signin h1 {
+            margin-bottom: 20px;
+            color: #0056a6;
+        }
+        .btn-primary {
+            background-color: #0056a6;
+            border-color: #0056a6;
+        }
+        .btn-primary:hover {
+            background-color: #004494;
+            border-color: #004494;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #0056a6;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal text-center">Iniciar Sesión</h1>
+        <label for="inputEmail" class="sr-only">Correo Electrónico</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control mt-3" placeholder="Contraseña" required>
+        <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Iniciar Sesión</button>
+        <p class="mt-4 text-center"><a href="#" class="text-primary">¿Olvidó su contraseña?</a></p>
+        <p class="mt-2 text-center">¿No tiene una cuenta? <a href="#" class="text-primary">Regístrese aquí</a></p>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Findeter. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
