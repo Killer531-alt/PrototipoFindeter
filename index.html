@@ -7,33 +7,59 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f4f6f9;
+            font-family: 'Arial', sans-serif;
         }
         .navbar {
-            background-color: #0056a6;
+            background-color: #003f7f;
+            padding: 15px;
         }
         .navbar-brand, .nav-link {
             color: #ffffff !important;
+            font-weight: bold;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #ffcc00 !important;
         }
         .jumbotron {
-            background-color: #007bff;
+            background-image: url('https://via.placeholder.com/1920x600'); /* Background image */
+            background-size: cover;
+            background-position: center;
             color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 60px 30px;
+        }
+        .jumbotron h1, .jumbotron p {
+            max-width: 800px;
+            margin: 0 auto;
         }
         .btn-primary {
-            background-color: #0056a6;
-            border-color: #0056a6;
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            color: #003f7f;
+            font-weight: bold;
         }
         .btn-primary:hover {
-            background-color: #004494;
-            border-color: #004494;
+            background-color: #e6b800;
+            border-color: #e6b800;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-title {
+            color: #003f7f;
+            font-weight: bold;
         }
         .footer {
-            background-color: #0056a6;
+            background-color: #003f7f;
             color: #ffffff;
-            padding: 20px 0;
+            padding: 40px 0;
         }
         .footer a {
-            color: #ffffff;
+            color: #ffcc00;
             text-decoration: none;
         }
         .footer a:hover {
@@ -48,7 +74,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Inicio</a>
                 </li>
@@ -68,55 +94,73 @@
         </div>
     </nav>
     <div class="container">
-        <div class="jumbotron mt-4">
+        <div class="jumbotron mt-4 text-center">
             <h1 class="display-4">Bienvenido a Findeter</h1>
-            <p class="lead">Somos una entidad que ofrece soluciones financieras para proyectos sostenibles y de alto impacto.</p>
-            <hr class="my-4">
-            <p>Findeter, la Financiera de Desarrollo Territorial S.A., es una institución financiera que apoya el desarrollo sostenible y la infraestructura en Colombia. Ofrecemos una gama de servicios financieros y asistencia técnica para promover proyectos en áreas como educación, salud, energía, agua potable, y saneamiento básico.</p>
-            <a class="btn btn-primary btn-lg" href="LoanApplicationForm.html" role="button">Solicitar Crédito</a>
+            <p class="lead">Soluciones financieras para un futuro más brillante y sostenible.</p>
+            <a class="btn btn-primary btn-lg mt-3" href="LoanApplicationForm.html" role="button">Solicitar Crédito</a>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="col-md-4">
-                <h3>Misión</h3>
-                <p>Proveer soluciones financieras y asistencia técnica que contribuyan al desarrollo sostenible y la mejora de la calidad de vida de los colombianos.</p>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Misión</h3>
+                        <p class="card-text">Proveer soluciones financieras y asistencia técnica que contribuyan al desarrollo sostenible y la mejora de la calidad de vida de los colombianos.</p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <h3>Visión</h3>
-                <p>Ser reconocidos como la entidad líder en el apoyo a proyectos sostenibles y de alto impacto en el territorio colombiano.</p>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Visión</h3>
+                        <p class="card-text">Ser reconocidos como la entidad líder en el apoyo a proyectos sostenibles y de alto impacto en el territorio colombiano.</p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <h3>Valores</h3>
-                <ul>
-                    <li>Integridad</li>
-                    <li>Compromiso</li>
-                    <li>Innovación</li>
-                    <li>Transparencia</li>
-                </ul>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Valores</h3>
+                        <ul class="list-unstyled">
+                            <li>Integridad</li>
+                            <li>Compromiso</li>
+                            <li>Innovación</li>
+                            <li>Transparencia</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="col-md-6">
-                <h3>Nuestros Servicios</h3>
-                <p>Ofrecemos una variedad de servicios financieros y asistencia técnica para apoyar proyectos que buscan mejorar la infraestructura y la calidad de vida en Colombia.</p>
-                <ul>
-                    <li>Financiación de proyectos</li>
-                    <li>Asistencia técnica</li>
-                    <li>Consultoría</li>
-                    <li>Capacitación</li>
-                </ul>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Nuestros Servicios</h3>
+                        <p>Ofrecemos una variedad de servicios financieros y asistencia técnica para apoyar proyectos que buscan mejorar la infraestructura y la calidad de vida en Colombia.</p>
+                        <ul>
+                            <li>Financiación de proyectos</li>
+                            <li>Asistencia técnica</li>
+                            <li>Consultoría</li>
+                            <li>Capacitación</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
-                <h3>Proyectos Destacados</h3>
-                <p>Hemos apoyado una serie de proyectos importantes en diversas áreas:</p>
-                <ul>
-                    <li>Construcción de escuelas y hospitales</li>
-                    <li>Proyectos de energía renovable</li>
-                    <li>Mejoramiento de sistemas de agua potable</li>
-                    <li>Desarrollo de infraestructuras de transporte</li>
-                </ul>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Proyectos Destacados</h3>
+                        <p>Hemos apoyado una serie de proyectos importantes en diversas áreas:</p>
+                        <ul>
+                            <li>Construcción de escuelas y hospitales</li>
+                            <li>Proyectos de energía renovable</li>
+                            <li>Mejoramiento de sistemas de agua potable</li>
+                            <li>Desarrollo de infraestructuras de transporte</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="col-md-12">
                 <h3>Noticias y Actualizaciones</h3>
                 <div class="list-group">
@@ -138,7 +182,7 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Enlaces Útiles</h5>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li><a href="about.html">Sobre Nosotros</a></li>
                         <li><a href="privacy.html">Política de Privacidad</a></li>
                         <li><a href="terms.html">Términos y Condiciones</a></li>
@@ -158,3 +202,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+
