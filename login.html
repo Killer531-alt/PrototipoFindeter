@@ -42,6 +42,10 @@
             text-align: center;
             padding: 10px 0;
         }
+        .alert {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +56,7 @@
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control mt-3" placeholder="Contraseña" required>
         <button id="loginButton" class="btn btn-lg btn-primary btn-block mt-4" type="submit">Iniciar Sesión</button>
+        <div id="errorAlert" class="alert alert-danger text-center">Credenciales incorrectas. Inténtelo de nuevo.</div>
         <p class="mt-4 text-center"><a href="#" class="text-primary">¿Olvidó su contraseña?</a></p>
         <p class="mt-2 text-center">¿No tiene una cuenta? <a href="#" class="text-primary">Regístrese aquí</a></p>
     </div>
@@ -62,14 +67,25 @@
     </footer>
 
     <script>
-        // Reemplaza 'https://tudestino.com' con el enlace al que deseas redirigir
-        const redirectionUrl = 'https://tudestino.com';
+        const redirectionUrl = 'https://tudestino.com'; // Reemplaza con tu URL de destino
 
         document.getElementById('loginButton').addEventListener('click', function(event) {
             event.preventDefault(); // Previene el envío real del formulario
-            window.location.href = redirectionUrl; // Redirige al usuario al enlace especificado
+            
+            const email = document.getElementById('inputEmail').value;
+            const password = document.getElementById('inputPassword').value;
+            const errorAlert = document.getElementById('errorAlert');
+
+            // Validación de credenciales
+            if (email === 'admin' && password === 'root123') {
+                window.location.href = redirectionUrl; // Redirige al usuario al enlace especificado
+            } else {
+                errorAlert.style.display = 'block'; // Muestra el mensaje de error
+            }
         });
     </script>
 </body>
+</html>
+
 </html>
 
