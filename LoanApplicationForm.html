@@ -41,6 +41,10 @@
             padding: 10px 0;
             margin-top: 30px;
         }
+        .success-message {
+            text-align: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -310,7 +314,14 @@
         <p>© 2024 Findeter - Todos los derechos reservados.</p>
     </div>
 
+    <!-- Página de éxito -->
+    <div class="container success-message" id="successMessage" style="display:none;">
+        <h2>Formulario enviado con éxito</h2>
+        <button class="btn btn-primary" onclick="goToIndex()">Regresar al inicio</button>
+    </div>
+
     <script>
+        // Función para avanzar a la siguiente sección
         function nextSection() {
             const current = document.querySelector('.form-section.current');
             const next = current.nextElementSibling;
@@ -320,6 +331,7 @@
             }
         }
 
+        // Función para regresar a la sección anterior
         function prevSection() {
             const current = document.querySelector('.form-section.current');
             const prev = current.previousElementSibling;
@@ -329,13 +341,20 @@
             }
         }
 
+        // Función para manejar el envío del formulario
         document.getElementById('formularioCredito').addEventListener('submit', function(e) {
-            // Aquí puedes agregar lógica de validación antes de enviar el formulario
-            alert('Formulario enviado');
-            e.preventDefault(); // Quitar esto si quieres que el formulario se envíe realmente
+            e.preventDefault(); // Evita que el formulario se envíe realmente
+            document.querySelector('.container').style.display = 'none'; // Oculta el formulario
+            document.getElementById('successMessage').style.display = 'block'; // Muestra el mensaje de éxito
         });
+
+        // Función para regresar al inicio
+        function goToIndex() {
+            window.location.href = 'index.html'; // Redirige al index
+        }
     </script>
 </body>
 </html>
+
 
 
