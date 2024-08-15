@@ -51,7 +51,7 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control mt-3" placeholder="Contraseña" required>
-        <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Iniciar Sesión</button>
+        <button id="loginButton" class="btn btn-lg btn-primary btn-block mt-4" type="submit">Iniciar Sesión</button>
         <p class="mt-4 text-center"><a href="#" class="text-primary">¿Olvidó su contraseña?</a></p>
         <p class="mt-2 text-center">¿No tiene una cuenta? <a href="#" class="text-primary">Regístrese aquí</a></p>
     </div>
@@ -60,8 +60,16 @@
             <p>&copy; 2024 Findeter. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // Reemplaza 'https://tudestino.com' con el enlace al que deseas redirigir
+        const redirectionUrl = 'https://tudestino.com';
+
+        document.getElementById('loginButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Previene el envío real del formulario
+            window.location.href = redirectionUrl; // Redirige al usuario al enlace especificado
+        });
+    </script>
 </body>
 </html>
+
